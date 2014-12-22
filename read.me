@@ -1,0 +1,31 @@
+目录地址
+http://app1.sfda.gov.cn/datasearch/face3/dir.html
+
+
+国产药品 tableId=25 page=11218  http://app1.sfda.gov.cn/datasearch/face3/content.jsp?tableId=25&tableName=TABLE25&Id=64963
+国产药品商品名 tableId=32 page=469   http://app1.sfda.gov.cn/datasearch/face3/content.jsp?tableId=32&tableName=TABLE32&Id=199727
+进口药品 tableId=36 page=304 http://app1.sfda.gov.cn/datasearch/face3/content.jsp?tableId=36&tableName=TABLE36&Id=13988
+进口药品商品名 tableId=60 page=230 http://app1.sfda.gov.cn/datasearch/face3/content.jsp?tableId=60&tableName=TABLE60&Id=6849
+
+列表查询地址
+http://app1.sfda.gov.cn/datasearch/face3/search.jsp?tableId=32&curstart=1
+
+执行步骤
+
+1.  从目录更新记录数
+    ./calculatePage.py
+
+2.  更新页面id
+    ./get_drug_ids.py 国产药品
+    ./get_drug_ids.py 国产药品商品名
+    ./get_drug_ids.py 进口药品
+    ./get_drug_ids.py 进口药品商品名
+
+3.  抓取页面
+    ./get_html_files.py 国产药品
+    ./get_html_files.py 国产药品商品名
+    ./get_html_files.py 进口药品
+    ./get_html_files.py 进口药品商品名
+
+
+
